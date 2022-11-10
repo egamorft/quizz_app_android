@@ -493,6 +493,13 @@ public class MenuHomeScreenActivity extends AppCompatActivity implements Navigat
             } catch (ActivityNotFoundException e) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.egamorft.c1.is")));
             }
+        }else if(menuItem.getItemId() == R.id.about){
+            try {
+                Intent about = new Intent(getApplicationContext(), AboutUsActivity.class);
+                startActivity(about);
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.egamorft.c1.is")));
+            }
         }
         return true;
     }

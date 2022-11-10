@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.ayowainc.quizbox.AboutUsActivity;
 import com.ayowainc.quizbox.MenuHomeScreenActivity;
 import com.ayowainc.quizbox.R;
 import com.ayowainc.quizbox.questionsModelClass;
@@ -480,6 +481,13 @@ public class ProgrammingProfessionalActivity extends AppCompatActivity implement
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=")));
             } catch (ActivityNotFoundException e) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.thedonuttech.tk")));
+            }
+        }else if(menuItem.getItemId() == R.id.about){
+            try {
+                Intent about = new Intent(getApplicationContext(), AboutUsActivity.class);
+                startActivity(about);
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.egamorft.c1.is")));
             }
         }
         return true;
